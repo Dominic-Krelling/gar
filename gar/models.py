@@ -41,4 +41,4 @@ class Veiculo(models.Model):
 
 
     def __str__ (self):
-        return f"{self.modelo} ({self.id})"
+        return f"{self.marca} | {self.ano} | {self.cor} | {self.modelo}"

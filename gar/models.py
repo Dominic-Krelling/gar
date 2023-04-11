@@ -27,6 +27,9 @@ class Cor(models.Model):
     def __str__ (self):
         return self.descrição
     
+    class Meta:
+        verbose_name_plural = "Cores"
+    
 class Veiculo(models.Model):
     ano = models.IntegerField(default=0, null=True, blank=True)
     preco = models.DecimalField(

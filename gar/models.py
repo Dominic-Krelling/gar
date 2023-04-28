@@ -14,6 +14,13 @@ class Marca(models.Model):
 
     def __str__(self):
         return self.nome.upper()
+    
+class Modelo(models.Model):
+    descricao = models.CharField(max_length=70)
+    marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="modelo")
+
+    def __str__(self):
+        return f"{self.descricao} | {self.marca}"
 
 class Acessorio(models.Model):
     descrição = models.CharField(max_length=100)
@@ -37,7 +44,7 @@ class Veiculo(models.Model):
     ano = models.IntegerField(default=0, null=True, blank=True)
     preco = models.DecimalField(
         max_digits=10,decimal_places=2,default=0, null=True, blank= True)
-    modelo = models.CharField(max_length=50)
+    # modelo = models.CharField(max_length=50)
     marca = models.ForeignKey(
         Marca, on_delete=models.PROTECT, related_name="veiculos")
     categoria = models.ForeignKey(

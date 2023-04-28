@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from gar.models import Marca, Cor, Categoria, Acessorio,Veiculo
+from gar.models import Marca, Cor, Categoria, Acessorio,Veiculo,Modelo
 
 class MarcaSerializer( ModelSerializer ):
     class Meta:
@@ -21,6 +21,20 @@ class AcessorioSerializer( ModelSerializer ):
     class Meta:
         model = Acessorio
         fields = "__all__"
+
+
+class ModeloSerializer(ModelSerializer):
+    class Meta:
+        model = Modelo
+        fields = "__all__"
+
+
+class ModeloDetailSerializer(ModelSerializer):
+    class Meta:
+        model = Modelo
+        fields = "__all__"
+        depth = 1        
+
 
 class VeiculoSerializer(ModelSerializer):
     class Meta:

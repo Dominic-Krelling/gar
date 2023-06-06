@@ -52,6 +52,7 @@ class Veiculo(models.Model):
         Categoria,on_delete=models.PROTECT, related_name="veiculos")
     cor = models.ForeignKey(
         Cor,on_delete=models.PROTECT, related_name="veiculos")
+    acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
 
 
     def __str__ (self):

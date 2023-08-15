@@ -1,4 +1,5 @@
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import IsAuthenticated
 
 from gar.models import Marca, Cor, Categoria, Acessorio, Veiculo, Modelo
 from gar.serializers import MarcaSerializer, CorSerializer, CategoriaSerializer, AcessorioSerializer,ModeloDetailSerializer, ModeloSerializer,VeiculoSerializer, VeiculoDetailSerializer, VeiculoListSerializer
@@ -14,6 +15,7 @@ class CorViewSet(ModelViewSet):
 class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
+    permission_classes = [IsAuthenticated]
 
 class AcessorioViewSet(ModelViewSet):
     queryset = Acessorio.objects.all()

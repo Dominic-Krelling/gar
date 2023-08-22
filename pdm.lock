@@ -57,6 +57,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "django-extensions"
+version = "3.2.3"
+requires_python = ">=3.6"
+summary = "Extensions for Django"
+dependencies = [
+    "Django>=3.2",
+]
+
+[[package]]
 name = "djangorestframework"
 version = "3.14.0"
 requires_python = ">=3.6"
@@ -155,10 +164,24 @@ requires_python = ">=3.7"
 summary = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 
 [[package]]
+name = "pydotplus"
+version = "2.0.2"
+summary = "Python interface to Graphviz's Dot language"
+dependencies = [
+    "pyparsing>=2.0.1",
+]
+
+[[package]]
 name = "pyjwt"
 version = "2.8.0"
 requires_python = ">=3.7"
 summary = "JSON Web Token implementation in Python"
+
+[[package]]
+name = "pyparsing"
+version = "3.1.1"
+requires_python = ">=3.6.8"
+summary = "pyparsing module - Classes and methods to define and execute parsing grammars"
 
 [[package]]
 name = "python-magic"
@@ -233,7 +256,7 @@ summary = "Implementation of RFC 6570 URI Templates"
 lock_version = "4.2"
 cross_platform = true
 groups = ["default", "dev"]
-content_hash = "sha256:98ff587a45732c35a87f3ad9a697a0bfa9b59fafdaf808247b10f2df91910f96"
+content_hash = "sha256:95f61c608e38be707dc01cb8c3f049b706eab5d66d9ee010548dd521b6e89971"
 
 [metadata.files]
 "asgiref 3.7.2" = [
@@ -279,6 +302,10 @@ content_hash = "sha256:98ff587a45732c35a87f3ad9a697a0bfa9b59fafdaf808247b10f2df9
 "django 4.2.4" = [
     {url = "https://files.pythonhosted.org/packages/7f/9e/fc6bab255ae10bc57fa2f65646eace3d5405fbb7f5678b90140052d1db0f/Django-4.2.4-py3-none-any.whl", hash = "sha256:860ae6a138a238fc4f22c99b52f3ead982bb4b1aad8c0122bcd8c8a3a02e409d"},
     {url = "https://files.pythonhosted.org/packages/8d/d2/a4f823741a12089e9ea0f68e1e7d3b6ad5b64e1665fbe9377cd9e1dc09cc/Django-4.2.4.tar.gz", hash = "sha256:7e4225ec065e0f354ccf7349a22d209de09cc1c074832be9eb84c51c1799c432"},
+]
+"django-extensions 3.2.3" = [
+    {url = "https://files.pythonhosted.org/packages/8a/f1/318684c9466968bf9a9c221663128206e460c1a67f595055be4b284cde8a/django-extensions-3.2.3.tar.gz", hash = "sha256:44d27919d04e23b3f40231c4ab7af4e61ce832ef46d610cc650d53e68328410a"},
+    {url = "https://files.pythonhosted.org/packages/a7/7e/ba12b9660642663f5273141018d2bec0a1cae1711f4f6d1093920e157946/django_extensions-3.2.3-py3-none-any.whl", hash = "sha256:9600b7562f79a92cbf1fde6403c04fee314608fefbb595502e34383ae8203401"},
 ]
 "djangorestframework 3.14.0" = [
     {url = "https://files.pythonhosted.org/packages/8e/53/5b2a002c5ebafd60dff1e1945a7d63dee40155830997439a9ba324f0fd50/djangorestframework-3.14.0.tar.gz", hash = "sha256:579a333e6256b09489cbe0a067e66abe55c6595d8926be6b99423786334350c8"},
@@ -382,9 +409,16 @@ content_hash = "sha256:98ff587a45732c35a87f3ad9a697a0bfa9b59fafdaf808247b10f2df9
     {url = "https://files.pythonhosted.org/packages/14/51/fe5a0d6ea589f0d4a1b97824fb518962ad48b27cd346dcdfa2405187997a/platformdirs-3.10.0-py3-none-any.whl", hash = "sha256:d7c24979f292f916dc9cbf8648319032f551ea8c49a4c9bf2fb556a02070ec1d"},
     {url = "https://files.pythonhosted.org/packages/dc/99/c922839819f5d00d78b3a1057b5ceee3123c69b2216e776ddcb5a4c265ff/platformdirs-3.10.0.tar.gz", hash = "sha256:b45696dab2d7cc691a3226759c0d3b00c47c8b6e293d96f6436f733303f77f6d"},
 ]
+"pydotplus 2.0.2" = [
+    {url = "https://files.pythonhosted.org/packages/60/bf/62567830b700d9f6930e9ab6831d6ba256f7b0b730acb37278b0ccdffacf/pydotplus-2.0.2.tar.gz", hash = "sha256:91e85e9ee9b85d2391ead7d635e3d9c7f5f44fd60a60e59b13e2403fa66505c4"},
+]
 "pyjwt 2.8.0" = [
     {url = "https://files.pythonhosted.org/packages/2b/4f/e04a8067c7c96c364cef7ef73906504e2f40d690811c021e1a1901473a19/PyJWT-2.8.0-py3-none-any.whl", hash = "sha256:59127c392cc44c2da5bb3192169a91f429924e17aff6534d70fdc02ab3e04320"},
     {url = "https://files.pythonhosted.org/packages/30/72/8259b2bccfe4673330cea843ab23f86858a419d8f1493f66d413a76c7e3b/PyJWT-2.8.0.tar.gz", hash = "sha256:57e28d156e3d5c10088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de"},
+]
+"pyparsing 3.1.1" = [
+    {url = "https://files.pythonhosted.org/packages/37/fe/65c989f70bd630b589adfbbcd6ed238af22319e90f059946c26b4835e44b/pyparsing-3.1.1.tar.gz", hash = "sha256:ede28a1a32462f5a9705e07aea48001a08f7cf81a021585011deba701581a0db"},
+    {url = "https://files.pythonhosted.org/packages/39/92/8486ede85fcc088f1b3dba4ce92dd29d126fd96b0008ea213167940a2475/pyparsing-3.1.1-py3-none-any.whl", hash = "sha256:32c7c0b711493c72ff18a981d24f28aaf9c1fb7ed5e9667c9e84e3db623bdbfb"},
 ]
 "python-magic 0.4.27" = [
     {url = "https://files.pythonhosted.org/packages/6c/73/9f872cb81fc5c3bb48f7227872c28975f998f3e7c2b1c16e95e6432bbb90/python_magic-0.4.27-py2.py3-none-any.whl", hash = "sha256:c212960ad306f700aa0d01e5d7a325d20548ff97eb9920dcd29513174f0294d3"},

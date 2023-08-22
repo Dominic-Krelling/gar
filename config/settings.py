@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "usuario",
     "uploader",
     "drf_spectacular",
-    'gar'
+    'gar',
+    "django_extensions",
 ]
 
 MIDDLEWARE = [

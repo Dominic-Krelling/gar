@@ -4,8 +4,7 @@ from .categorias import Categoria
 from .cores import Cor
 from .marcas import Marca
 from .modelos import Modelo
-
-
+from uploader.models import Image
 
 class Veiculo(models.Model):
     ano = models.IntegerField(default=0, null=True, blank=True)
@@ -20,6 +19,7 @@ class Veiculo(models.Model):
     cor = models.ForeignKey(
         Cor,on_delete=models.PROTECT, related_name="veiculos")
     acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
+    foto = models.ForeignKey( Image, related_name="+", on_delete=models.CASCADE, null=True, blank=True, default=None )
 
 
     def __str__ (self):

@@ -7,6 +7,8 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+from usuario.router import router as usuario_router
+
 from gar.views import MarcaViewSet, CorViewSet, CategoriaViewSet, AcessorioViewSet, ModeloViewSet, VeiculoViewSet
 
 router = DefaultRouter()
@@ -23,4 +25,5 @@ urlpatterns = [
     path("", include(router.urls)),
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    path("api/", include(usuario_router.urls)),
 ]

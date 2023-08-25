@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from gar.models import Marca, Cor, Categoria, Acessorio, Veiculo, Modelo
+from gar.models import Acessorio
 
 
 class AcessorioSerializer(ModelSerializer):

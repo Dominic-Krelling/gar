@@ -1,11 +1,10 @@
 from django.db import models
-from .acessorios import Acessorio
-from .cores import Cor
-from .marcas import Marca
-from .modelos import Modelo
+
+from gar.models import Acessorio, Cor, Modelo, Categoria, Marca
 from uploader.models import Image
 
 class Veiculo(models.Model):
+    descrição = models.CharField(max_length=99)
     ano = models.IntegerField(default=0, null=True, blank=True)
     preco = models.DecimalField(
         max_digits=10,decimal_places=2,default=0, null=True, blank= True)
@@ -14,8 +13,11 @@ class Veiculo(models.Model):
     cor = models.ForeignKey(
         Cor,on_delete=models.PROTECT, related_name="veiculos")
     acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
-    foto = models.ForeignKey( Image, related_name="+", on_delete=models.CASCADE, null=True, blank=True, default=None )
+    foto = models.ManyToManyField(Image, related_name="Veiculo")
 
 
     def __str__ (self):
         return f"{self.ano} | {self.cor} | {self.modelo}"
+
+    class Meta:
+        verbose_name = "Veiculo"

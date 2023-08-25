@@ -22,7 +22,7 @@ class VeiculoDetailSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
         fields = "__all__"
-        depth = 1
+        depth = 2
         foto = ImageSerializer(required = False)
         
 
